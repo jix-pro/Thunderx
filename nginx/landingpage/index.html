@@ -1,121 +1,264 @@
 <!DOCTYPE html>
 <html lang="en">
-    <!-- Copyright (c) 2025 Battelle Energy Alliance, LLC.  All rights reserved. -->
-    <head>
-        <base target="_blank">
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="" />
-        <meta name="author" content="" />
-        <title>Malcolm</title>
-        <!-- Favicon-->
-        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
-        <!-- Bootstrap icons-->
-        <link href="css/bootstrap-icons.css" rel="stylesheet" type="text/css" />
-        <!-- Google fonts-->
-        <link href="css/google-fonts.css" rel="stylesheet" type="text/css" />
-        <!-- Core theme CSS (includes Bootstrap)-->
-        <link href="css/styles.css" rel="stylesheet" />
-    </head>
-    <body>
-        <!-- Navigation-->
-        <nav class="navbar navbar-light bg-light static-top">
-            <div class="container"/>
-        </nav>
-        <!-- Masthead-->
-        <header class="masthead">
-            <div class="container"/>
-        </header>
-        <!-- Icons Grid-->
-        <section class="features-icons bg-light text-center">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-3">
-                        <div class="features-icons-item mx-auto mb-0 mb-lg-3">
-                            <a href="MALCOLM_DASHBOARDS_URL_REPLACER"><img style='max-width: 35%; height: auto; object-fit: contain' src="assets/img/MALCOLM_DASHBOARDS_ICON_REPLACER"/>
-                            <h3>MALCOLM_DASHBOARDS_NAME_REPLACER</h3></a>
-                            <p class="lead mb-0">Visualize traffic or track down security concerns with dozens of <a href="/readme/docs/dashboards.html#PrebuiltVisualizations">pre-built dashboards</a>, or <a href="/readme/docs/dashboards.html#BuildDashboard">create your own</a></p>
-                        </div>
-                    </div>
-                    <div class="col-lg-3">
-                        <div class="features-icons-item mx-auto mb-5 mb-lg-3">
-                            <a href="/arkime/"><img style='width: 19%; height: 19%; object-fit: contain' src="assets/img/arkime.svg"/>
-                            <h3>Arkime</h3></a>
-                            <p class="lead mb-0">Delve into <a href="/readme/docs/arkime.html">session details</a> including full packet payloads</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-3">
-                        <div class="features-icons-item mx-auto mb-0 mb-lg-3">
-                            <a href="MALCOLM_NETBOX_URL_REPLACER"><img style='max-width: 35%; height: auto; object-fit: contain' src="assets/img/netbox_icon.svg"/>
-                            <h3>MALCOLM_NETBOX_TITLE_REPLACER</h3></a>
-                            <p class="lead mb-0">MALCOLM_NETBOX_DESC_REPLACER</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-3">
-                        <div class="features-icons-item mx-auto mb-0 mb-lg-3">
-                            <a href="/arkime/cyberchef/"><img style='max-width: 35%; height: auto; object-fit: contain' src="assets/img/cyberchef.svg"/>
-                            <h3>CyberChef</h3></a>
-                            <p class="lead mb-0">Slice and dice data with this web app for encryption, encoding, compression and data analysis</p>
-                        </div>
+<head>
+    <!-- Copyright (c) 2025 ABSEGA, MDR. All rights reserved. -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Thunderx Dashboard - Dark Aggressive Blue</title>
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Bootstrap Icons -->
+    <link href="css/bootstrap-icons.css" rel="stylesheet" />
+    <!-- Google Fonts -->
+    <link href="css/google-fonts.css" rel="stylesheet" />
+    <!-- Custom Styles -->
+    <style>
+        /* Background with subtle dark textured wallpaper effect */
+        body {
+            background: #000000 url('https://www.transparenttextures.com/patterns/asfalt-dark.png') repeat;
+            color: #d0d9f7;
+            font-family: 'Orbitron', sans-serif;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        /* Navbar */
+        .navbar {
+            background-color: #0b0c10 !important;
+            box-shadow: 0 0 15px #007bffaa;
+        }
+        .navbar-brand {
+            color: #007bff !important;
+            font-weight: 900;
+            font-size: 1.8rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            text-shadow: 0 0 8px #007bffcc;
+        }
+        /* Header */
+        header {
+            background: linear-gradient(90deg, #0f2027, #203a43, #2c5364);
+            padding: 3rem 0;
+            text-align: center;
+            box-shadow: inset 0 0 80px #007bff44;
+            margin-bottom: 3rem;
+            position: relative;
+        }
+        header img.logo-primary {
+            max-height: 120px;
+            filter: drop-shadow(0 0 10px #007bffcc);
+            transition: filter 0.3s ease;
+            max-width: 300px;
+        }
+        header img.logo-primary:hover {
+            filter: drop-shadow(0 0 20px #007bffee);
+        }
+        header img.logo-secondary {
+            max-height: 140px;
+            margin-top: 1rem;
+            filter: drop-shadow(0 0 15px #007bffcc);
+            transition: filter 0.3s ease;
+            max-width: 320px;
+        }
+        header img.logo-secondary:hover {
+            filter: drop-shadow(0 0 30px #007bffee);
+        }
+        /* Cards */
+        .card {
+            background-color: #121619;
+            border: 1px solid #007bff44;
+            border-radius: 1rem;
+            box-shadow: 0 0 20px #007bffcc;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+        }
+        .card:hover {
+            transform: translateY(-10px) scale(1.05);
+            box-shadow: 0 0 30px #007bffee, 0 0 40px #007bffee inset;
+            border-color: #007bffee;
+        }
+        .card-img-top {
+            max-height: 120px;
+            object-fit: contain;
+            padding: 2rem;
+            filter: drop-shadow(0 0 5px #007bff);
+            transition: filter 0.3s ease;
+        }
+        .card:hover .card-img-top {
+            filter: drop-shadow(0 0 20px #007bff);
+        }
+        .card-title {
+            font-weight: 900;
+            font-size: 1.5rem;
+            color: #007bff;
+            text-shadow: 0 0 8px #007bffaa;
+            margin-bottom: 0.75rem;
+            text-transform: uppercase;
+        }
+        .card-text {
+            font-size: 1rem;
+            color: #a0c8ffcc;
+            font-weight: 600;
+            line-height: 1.4;
+        }
+        /* Icon cards with large neon icons */
+        .icon-card-icon {
+            font-size: 5rem;
+            color: #007bff;
+            text-shadow: 0 0 15px #007bff88;
+            padding-top: 2.5rem;
+            transition: text-shadow 0.3s ease;
+        }
+        .card:hover .icon-card-icon {
+            text-shadow: 0 0 30px #007bffee, 0 0 40px #007bffee inset;
+        }
+        /* Links override */
+        a.card-link {
+            color: inherit;
+            text-decoration: none;
+        }
+        a.card-link:hover {
+            text-decoration: none;
+        }
+        /* Footer */
+        footer {
+            background-color: #0b0c10;
+            color: #007bffaa;
+            padding: 1rem 0;
+            font-size: 0.9rem;
+            text-align: center;
+            margin-top: auto;
+            box-shadow: inset 0 0 30px #007bff22;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+        /* Responsive tweaks */
+        @media (max-width: 576px) {
+            header img.logo-primary,
+            header img.logo-secondary {
+                max-width: 90%;
+                height: auto;
+            }
+            .card-title {
+                font-size: 1.25rem;
+            }
+            .icon-card-icon {
+                font-size: 4rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg">
+    <div class="container">
+        <a class="navbar-brand" href="#">Thunderx</a>
+    </div>
+</nav>
+
+<!-- Header -->
+<header>
+    <div class="container text-center">
+        <!-- Primary logo (transparent background, stylized text) -->
+        <img src="assets/img/thunderx_logo.svg" alt="Thunderx Logo" class="logo-primary" />
+        <!-- Secondary logo (3D style) -->
+        <img src="assets/img/thunderx_logo_3d.svg" alt="Thunderx 3D Logo" class="logo-secondary" />
+    </div>
+</header>
+
+<!-- Dashboard Cards Section -->
+<main class="container mb-5">
+    <div class="row g-4">
+        <div class="col-sm-6 col-lg-3">
+            <a href="/dashboards/" class="card-link" tabindex="0">
+                <div class="card h-100">
+                    <img src="assets/img/opensearch_mark_default.svg" class="card-img-top" alt="Dashboards" />
+                    <div class="card-body">
+                        <h5 class="card-title">Dashboards</h5>
+                        <p class="card-text">Visualize traffic or track down security concerns with dozens of pre-built dashboards.</p>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-lg-3">
-                        <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
-                            <a href="/readme/"><div class="features-icons-icon d-flex"><i class="bi-journal-richtext m-auto text-primary"></i></div>
-                            <h3>Documentation</h3></a>
-                            <p class="lead mb-0">Read the Malcolm user guide</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-3">
-                        <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
-                            <a href="/upload/"><div class="features-icons-icon d-flex"><i class="bi-upload m-auto text-primary"></i></div>
-                            <h3>Artifact Upload</h3></a>
-                            <p class="lead mb-0"><a href="/readme/docs/upload.html">Upload</a> previously-captured PCAP files or archived Zeek logs for analysis</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-3">
-                        <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
-                            <a href="MALCOLM_AUTH_URL_REPLACER"><div class="features-icons-icon d-flex"><i class="bi-person m-auto text-primary"></i></div>
-                            <h3>MALCOLM_AUTH_TITLE_REPLACER</h3></a>
-                            <p class="lead mb-0">MALCOLM_AUTH_DESC_REPLACER</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-3">
-                        <div class="features-icons-item mx-auto mb-0 mb-lg-3">
-                            <a href="/extracted-files/"><div class="features-icons-icon d-flex"><i class="bi-archive m-auto text-primary"></i></div>
-                            <h3>Extracted Files</h3></a>
-                            <p class="lead mb-0">Browse the preserved <a href="/readme/docs/file-scanning.html#ZeekFileExtractionUI">extracted files</a> carved and scanned by Malcolm</p>
-                        </div>
+            </a>
+        </div>
+        <div class="col-sm-6 col-lg-3">
+            <a href="/arkime/" class="card-link" tabindex="0">
+                <div class="card h-100">
+                    <img src="assets/img/arkime.svg" class="card-img-top" alt="Arkime" />
+                    <div class="card-body">
+                        <h5 class="card-title">Arkime</h5>
+                        <p class="card-text">Delve into session details including full packet payloads.</p>
                     </div>
                 </div>
-            </div>
-        </section>
-        <!-- Footer-->
-        <footer class="footer bg-light">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-6 h-100 text-center text-lg-start my-auto">
-                        <p class="text-muted small mb-4 mb-lg-0">
-                        <a href="https://github.com/idaholab/Malcolm/releases">Malcolm MALCOLM_VERSION_REPLACER</a> &copy; 2025 Battelle Energy Alliance, LLC; developed at INL and released through the cooperation of the Cybersecurity and Infrastructure Security Agency of the U.S. Department of Homeland Security.</p>
-                    </div>
-                    <div class="col-lg-6 h-100 text-center text-lg-end my-auto">
-                        <ul class="list-inline mb-0">
-                            <li class="list-inline-item">
-                                <a href="/mapi/"><i class="bi-cloud-fog fs-3" title="REST API"></i></a>
-                            </li>
-                            <li class="list-inline-item">
-                                <a href="https://github.com/idaholab/Malcolm"><i class="bi-github fs-3" title="GitHub"></i></a>
-                            </li>
-                        </ul>
+            </a>
+        </div>
+        <div class="col-sm-6 col-lg-3">
+            <a href="/netbox/" class="card-link" tabindex="0">
+                <div class="card h-100">
+                    <img src="assets/img/netbox_icon.svg" class="card-img-top" alt="NetBox" />
+                    <div class="card-body">
+                        <h5 class="card-title">NetBox</h5>
+                        <p class="card-text">Model and document your network infrastructure.</p>
                     </div>
                 </div>
-            </div>
-        </footer>
-        <!-- Bootstrap core JS-->
-        <script src="js/bootstrap.bundle.min.js"></script>
-        <!-- Core theme JS-->
-        <script src="js/scripts.js"></script>
-    </body>
-    <!-- See, Here I'm Now By Myself, Uh, Talking To Myself. That's, That's Chaos Theory. -->
+            </a>
+        </div>
+        <div class="col-sm-6 col-lg-3">
+            <a href="/arkime/cyberchef/" class="card-link" tabindex="0">
+                <div class="card h-100">
+                    <img src="assets/img/cyberchef.svg" class="card-img-top" alt="CyberChef" />
+                    <div class="card-body">
+                        <h5 class="card-title">CyberChef</h5>
+                        <p class="card-text">Slice and dice data with this web app for encryption, encoding, compression and data analysis.</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <div class="col-sm-6 col-lg-3">
+            <a href="/upload/" class="card-link" tabindex="0">
+                <div class="card h-100 text-center">
+                    <i class="bi bi-upload icon-card-icon"></i>
+                    <div class="card-body pt-3">
+                        <h5 class="card-title">Artifact Upload</h5>
+                        <p class="card-text">Upload previously-captured PCAP files or archived Zeek logs for analysis.</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="col-sm-6 col-lg-3">
+            <a href="/auth/" class="card-link" tabindex="0">
+                <div class="card h-100 text-center">
+                    <i class="bi bi-person icon-card-icon"></i>
+                    <div class="card-body pt-3">
+                        <h5 class="card-title">Local Account Management</h5>
+                        <p class="card-text">Manage the local user accounts maintained by Thunderx.</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="col-sm-6 col-lg-3">
+            <a href="/extracted-files/" class="card-link" tabindex="0">
+                <div class="card h-100 text-center">
+                    <i class="bi bi-archive icon-card-icon"></i>
+                    <div class="card-body pt-3">
+                        <h5 class="card-title">Extracted Files</h5>
+                        <p class="card-text">Browse the preserved extracted files carved and scanned by Thunderx.</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+</main>
+
+<!-- Footer -->
+<footer>
+    Thunderx &copy; 2025 ABSEGA, MDR; Developed by R&D Team.
+</footer>
+
+<!-- Bootstrap JS Bundle -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
 </html>
